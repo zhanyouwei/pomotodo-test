@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>票在哪儿</title>
+    <style>
+      html {
+        font-family: Lato,"Helvetica Neue",Helvetica,sans-serif;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      form {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 42px;
+        font-weight: 400;
+      }
+
+      input {
+        border: 1px solid #d6d6d6;
+        padding: 9px 10px 10px;
+        width: 300px;
+        color: #333;
+        transition: color .5s,box-shadow .5s,background-color .5s;
+        outline: 0;
+        border-radius: 4px;
+        display: block;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+
+      button {
+        margin: 15px 0;
+        font-size: 18px;
+        line-height: 25px;
+        height: 40px;
+        -webkit-appearance: none;
+        padding: 5px 40px 6px;
+        background: #FF5A44;
+        color: #FFF;
+        border: 1px solid #f1604d;
+        text-shadow: 0 -1px 0 #f1604d;
+        border-radius: 4px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/getqrcode" method="post">
+      <h1>请输入手机号</h1>
+      <input type="text" name="phone">
+      <button>申请找回</button>
+    </form>
+  </body>
+</html>

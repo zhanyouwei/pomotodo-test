@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <title>票在这儿</title>
+    <style>
+      #qrcode {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -128px;
+        margin-left: -128px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="qrcode"></div>
+  </body>
+  <script>
+    $(function(){
+      var searchStr = location.search.substr(1,location.search.length);
+      if (searchStr !== 'undefined') {
+        $('#qrcode').qrcode(searchStr);
+      } else {
+        alert('未找到相关记录');
+      }
+    });
+  </script>
+</html>
